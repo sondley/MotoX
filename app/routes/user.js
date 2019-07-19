@@ -9,7 +9,7 @@ module.exports = function(app) {
 	// todoList Routes
 	app
 		.route("/users")
-		.get(todoList.list_all_users)
+		.get(authorize.ensureAuthenticated, todoList.list_all_users)
 		.post(todoList.create_a_user);
 
 	app
