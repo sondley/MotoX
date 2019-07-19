@@ -20,6 +20,11 @@ module.exports = mongoose.model(
 			default: "",
 			unique: true
 		},
+		cin: {
+			type: String,
+			default: "",
+			unique: true
+		},
 		email: {
 			type: String,
 			unique: true,
